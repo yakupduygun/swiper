@@ -1,13 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Test</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Test</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <app-root></app-root>
+
+    <script>
+      setTimeout(function () {
+        var swiper = new Swiper(".mySwiper", {
+          effect: "cube",
+          grabCursor: true,
+          cubeEffect: {
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        });
+        console.log(swiper);
+      }, 100);
+
+
+    //   var swiper2 = new Swiper(".MySwiper", {
+    //   effect: "cards",
+    //   grabCursor: true,
+    // });
+    </script>
+
+
+
+    <!-- Initialize Swiper -->
+  </body>
 </html>
